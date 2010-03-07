@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "rtss"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{rtss - RealTime Source code Search system}
+    gem.description = %Q{RealTime Source code Search system}
     gem.email = "yagihiro@gmail.com"
     gem.homepage = "http://github.com/yagihiro/rtss"
     gem.authors = ["Hiroki Yagita"]
@@ -34,7 +34,11 @@ task :spec => :check_dependencies
 
 task :default => :spec
 
-require 'rake/rdoctask'
+begin
+  require 'hanna/rdoctask'
+rescue
+  require 'rake/rdoctask'
+end
 Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 

@@ -1,6 +1,11 @@
-= rtss
+= rtss - RealTime Source code Search system.
 
-Description goes here.
+The rtss is realtime source code search system.
+
+The goal:
+* search there and then
+* search responce is fast
+
 
 == Note on Patches/Pull Requests
  
