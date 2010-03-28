@@ -9,9 +9,10 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Hiroki Yagita"]
-  s.date = %q{2010-03-07}
+  s.date = %q{2010-03-28}
   s.description = %q{RealTime Source code Search system}
   s.email = %q{yagihiro@gmail.com}
+  s.extensions = ["ext/extconf.rb"]
   s.extra_rdoc_files = [
     "LICENSE",
      "README.rdoc"
@@ -23,7 +24,12 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "ext/extconf.rb",
+     "ext/sais.c",
+     "ext/sais.h",
+     "ext/suffixarray_ruby.c",
      "lib/rtss.rb",
+     "rtss.gemspec",
      "spec/rtss_spec.rb",
      "spec/spec.opts",
      "spec/spec_helper.rb"
@@ -35,7 +41,8 @@ Gem::Specification.new do |s|
   s.summary = %q{rtss - RealTime Source code Search system}
   s.test_files = [
     "spec/rtss_spec.rb",
-     "spec/spec_helper.rb"
+     "spec/spec_helper.rb",
+     "spec/suffixarray_spec.rb"
   ]
 
   if s.respond_to? :specification_version then
